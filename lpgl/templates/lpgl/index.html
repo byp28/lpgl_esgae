@@ -17,5 +17,11 @@
     {% include "./page.html" %}
 
     <p>{{lpliste}}</p>
+
+    <ul>
+      {%for livre in livres%}
+        <li>{{livre.titre}}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
