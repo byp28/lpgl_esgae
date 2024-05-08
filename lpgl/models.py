@@ -9,6 +9,16 @@ class Eleve(models.Model):
         verbose_name = "Eleve"
         verbose_name_plural = "Eleves"
         
+class Bibliotheque(models.Model):
+    Libele = models.CharField(max_length = 100, unique= True, verbose_name ="name")
+    
+    def __str__(self):
+        return self.Libele
+    class Meta:
+        verbose_name = "Bibliotheque"
+        verbose_name_plural = "Bibliotheques"
+
+        
 class Livre(models.Model):
     titre = models.CharField(max_length = 100, unique= True, verbose_name = "titre")
     quantite = models.IntegerField(default = 1 , verbose_name = "quantite")
